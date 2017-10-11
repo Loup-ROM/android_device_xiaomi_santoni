@@ -243,8 +243,9 @@ PRODUCT_PACKAGES += \
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \
-    libcnefeatureconfig \
-    libxml2
+    libxml2 \
+    libprotobuf-cpp-full \
+    rild_socket
 
 # Sensors
 PRODUCT_COPY_FILES += \
