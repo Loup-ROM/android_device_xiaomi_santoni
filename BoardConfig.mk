@@ -220,7 +220,7 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Trying old libaudiopolicymanager
-USE_LEGACY_AUDIO_POLICY := false
+USE_LEGACY_AUDIO_POLICY := 0
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/santoni/BoardConfigVendor.mk
