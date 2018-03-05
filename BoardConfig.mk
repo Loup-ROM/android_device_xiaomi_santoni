@@ -229,11 +229,11 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # SDCLANG 3.8
-ifneq ($(HOST_OS),darwin)
-  SDCLANG := true
-  SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
-  SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
-endif
+# ifneq ($(HOST_OS),darwin)
+#  SDCLANG := true
+#  SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+#  SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+# endif
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/santoni/BoardConfigVendor.mk
