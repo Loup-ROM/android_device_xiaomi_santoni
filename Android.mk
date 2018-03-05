@@ -113,4 +113,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS)
 
+# Fixes errors related to libnativehelper, libnativeloader
+include $(LOCAL_PATH)/../../../../libnativehelper/Android.mk
+
 endif
