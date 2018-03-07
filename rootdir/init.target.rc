@@ -250,7 +250,7 @@ on property:init.svc.dts_configurator=stopped
 service per_mgr /system/bin/pm-service
     class core
     user system
-    group system
+    group system net_raw
     writepid /dev/cpuset/system-background/tasks
 
 service per_proxy /system/bin/pm-proxy
