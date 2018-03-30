@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.qcom.usb.rc
+# import init.qcom.usb.rc
 import init.target.rc
 
 on early-init
@@ -637,17 +637,21 @@ service netmgrd /system/bin/netmgrd
     group radio readproc system wakelock
     writepid /dev/cpuset/system-background/tasks
 
+# Disabled for SFOS
 service ipacm-diag /system/bin/ipacm-diag
     class main
     user system
     socket ipacm_log_file dgram 660 system net_admin
     group net_admin qcom_diag
+    disabled
 
+# Disabled for SFOS
 service ipacm /system/bin/ipacm
     class main
     user net_admin
     group net_admin inet
     writepid /dev/cpuset/system-background/tasks
+    disabled
 
 service qti /system/vendor/bin/qti
     class main
@@ -1030,6 +1034,9 @@ service seemp_healthd /system/vendor/bin/seemp_healthd
     group system
 
 on charger
+    load_system_props
+    load_persist_props
+    start qcom-post-boot
     setprop persist.sys.usb.config charging
 
 #add poweroffhandler
@@ -1090,8 +1097,9 @@ service logdumpd /system/bin/logcat -b all -v threadtime -D -w /dev/block/bootde
 on property:ro.logdumpd.enabled=1
     start logdumpd
 
-on property:vold.decrypt=trigger_restart_min_framework
-    start time_daemon
+# Disabled for SFOS
+#on property:vold.decrypt=trigger_restart_min_framework
+#    start time_daemon
 
-on property:vold.decrypt=trigger_restart_framework
-    restart time_daemon
+#on property:vold.decrypt=trigger_restart_framework
+#    restart time_daemon
