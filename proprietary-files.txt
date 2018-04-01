@@ -650,8 +650,11 @@ lib64/libloc_api_v02.so
 lib64/libloc_ds_api.so
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
+vendor/lib/libDRPlugin.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libdataitems.so
+vendor/lib/libdrplugin_client.so
+vendor/lib/libevent_observer.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
