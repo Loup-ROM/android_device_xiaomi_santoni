@@ -53,6 +53,13 @@ TARGET_KERNEL_CLANG_COMPILE := true
 KERNEL_CLANG_VERSION := sd4.0
 TARGET_KERNEL_CLANG_PATH:= $(ANDROID_BUILD_TOP)/prebuilts/clang/linux-x86/host/clang-sd4.0/bin
 
+# ROM Clang
+ifneq ($(HOST_OS),darwin)
+  SDCLANG := true
+  SDCLANG_PATH := prebuilts/clang/linux-x86/host/clang-sd4.0/bin
+  SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+endif
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
