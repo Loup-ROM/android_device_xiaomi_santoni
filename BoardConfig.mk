@@ -48,6 +48,11 @@ TARGET_KERNEL_CONFIG := santoni_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
 TARGET_KERNEL_CLANG_COMPILE := true
 
+# Kernel Clang
+TARGET_KERNEL_CLANG_COMPILE := true
+KERNEL_CLANG_VERSION := sd4.0
+TARGET_KERNEL_CLANG_PATH:= $(ANDROID_BUILD_TOP)/prebuilts/clang/linux-x86/host/clang-sd4.0/bin
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
