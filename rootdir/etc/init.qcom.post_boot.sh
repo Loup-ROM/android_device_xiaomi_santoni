@@ -299,28 +299,12 @@ else
         fi
     fi
 
-    SWAP_ENABLE_THRESHOLD=1048576
-    swap_enable=`getprop ro.vendor.qti.config.swap`
-
     if [ -f /sys/devices/soc0/soc_id ]; then
         soc_id=`cat /sys/devices/soc0/soc_id`
     else
         soc_id=`cat /sys/devices/system/soc/soc0/id`
     fi
 
-    # Enable swap initially only for 1 GB targets
-    if [ "$MemTotal" -le "$SWAP_ENABLE_THRESHOLD" ] && [ "$swap_enable" == "true" ]; then
-        # Static swiftness
-        echo 1 > /proc/sys/vm/swap_ratio_enable
-        echo 70 > /proc/sys/vm/swap_ratio
-
-        # Swap disk - 200MB size
-        if [ ! -f /data/system/swap/swapfile ]; then
-            dd if=/dev/zero of=/data/system/swap/swapfile bs=1m count=200
-        fi
-        mkswap /data/system/swap/swapfile
-        swapon /data/system/swap/swapfile -p 32758
-    fi
 fi
 }
 
