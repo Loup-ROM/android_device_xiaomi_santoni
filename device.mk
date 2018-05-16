@@ -293,6 +293,10 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
     libandroid_net
 
+# OpenDelta
+PRODUCT_PACKAGES += \
+    OpenDelta
+
 # OMX
 PRODUCT_PACKAGES += \
     libmm-omxcore \
