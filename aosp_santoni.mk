@@ -1,5 +1,5 @@
 #
-# Copyright 2015 The Android Open Source Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,16 @@
 # limitations under the License.
 #
 
-# This file is executed by build/envsetup.sh, and can use anything
-# defined in envsetup.sh.
-#
-# In particular, you can add lunch options with the add_lunch_combo
-# function: add_lunch_combo generic-eng
+$(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-for var in eng user userdebug; do
-  add_lunch_combo aosp_santoni-$var
-done
+# Inherit some common AOSP stuff
+$(call inherit-product, vendor/aosp/common.mk)
+
+PRODUCT_NAME := aosp_santoni
+BOARD_VENDOR := Xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT="Xiaomi/santoni/santoni:6.0.1/MMB29M/V8.2.9.0.MAMMIEA:user/release-keys" \
+    PRIVATE_BUILD_DESC="santoni-user 7.1.2 N2G47H V9.5.2.0.NAMCNFA release-keys"
