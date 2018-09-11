@@ -16,17 +16,14 @@
 
 $(call inherit-product, device/xiaomi/santoni/full_santoni.mk)
 
-# Inherit some common AOSP stuff.
+# Inherit some common LineageOS stuff.
 TARGET_ARCH := arm64
 TARGET_DENSITY := xhdpi
 TARGET_BOOT_ANIMATION_RES := 720
 
-$(call inherit-product, vendor/carbon/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
-PRODUCT_NAME := carbon_santoni
+PRODUCT_NAME := lineage_santoni
 BOARD_VENDOR := Xiaomi
 PRODUCT_DEVICE := santoni
 
