@@ -32,9 +32,5 @@
 # Vibration control
 /sys/class/timed_output/vibrator/vtg_level		u:object_r:sysfs_vibrator:s0
 
-# Torch
-/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_0/max_brightness          u:object_r:sysfs_torch:s0
-/sys/devices/soc/qpnp-flash-led-25/leds/led:torch_1/max_brightness          u:object_r:sysfs_torch:s0
-
 # Kcal
 /sys/devices/platform/kcal_ctrl.0(/.*)?			u:object_r:sysfs_kcal:s0
