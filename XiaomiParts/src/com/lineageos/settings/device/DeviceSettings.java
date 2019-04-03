@@ -45,8 +45,10 @@ public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
+    public static final String KEY_BATTERY_CHARGING_LIMITER = "battery_charging_limiter";
 
     private VibratorStrengthPreference mVibratorStrength;
+    private BatteryChargingLimiterPreference mBatteryChargingLimiter;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -65,6 +67,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mVibratorStrength = (VibratorStrengthPreference) findPreference(KEY_VIBSTRENGTH);
         if (mVibratorStrength != null) {
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
+        }
+
+        mBatteryChargingLimiter = (BatteryChargingLimiterPreference) findPreference(KEY_BATTERY_CHARGING_LIMITER);
+        if (mBatteryChargingLimiter != null) {
+            mBatteryChargingLimiter.setEnabled(BatteryChargingLimiterPreference.isSupported());
         }
     }
 

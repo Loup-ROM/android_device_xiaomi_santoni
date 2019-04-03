@@ -49,5 +49,6 @@ public class Startup extends BroadcastReceiver {
 
         VibratorStrengthPreference.restore(context);
         DisplayCalibration.restore(context);
+        BatteryChargingLimiterPreference.restore(context);
     }
 }

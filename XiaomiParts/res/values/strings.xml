@@ -36,4 +36,6 @@
     <string name="kcal_greyscale_title">Greyscale</string>
     <string name="kcal_greyscale_summary">Fully disable saturation</string>
     <string name="menu_reset">Reset</string>
+    <string name="battery_charging_limiter_title">Battery charging limiter</string>
+    <string name="battery_charging_limiter_desc">Limit battery charging at</string>
 </resources>
