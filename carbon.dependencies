@@ -3,7 +3,7 @@
     "remote"     : "gh",
     "repository" : "ryan-andri/android_kernel_xiaomi_santoni",
     "target_path": "kernel/xiaomi/msm8937",
-    "revision"   : "pie-google-clang"
+    "revision"   : "pie-google"
   },
   {
     "remote"     : "gh",
