@@ -248,7 +248,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qcom.sh \
     init.target.rc \
-    init.device.rc \
     init.baseband.sh \
     init.goodix.sh \
     fstab.qcom

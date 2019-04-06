@@ -29,7 +29,6 @@ import /vendor/etc/init/hw/init.qcom.power.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.device.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -1245,3 +1244,13 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     oneshot
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
+
+service baseband-sh /vendor/bin/init.baseband.sh
+    class late_start
+    user root
+    oneshot
+
+service goodix_script /vendor/bin/init.goodix.sh
+    class late_start
+    user system
+    oneshot
