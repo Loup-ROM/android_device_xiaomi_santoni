@@ -250,7 +250,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 ifneq ($(HOST_OS),darwin)
   SDCLANG := true
   TARGET_USE_SDCLANG := true
-  SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-6.0.2/bin
+  SDCLANG_PATH := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
+  SDCLANG_PATH_2 := prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_4.0/prebuilt/linux-x86_64/bin
   SDCLANG_LTO_DEFS := vendor/lineage/build/core/sdllvm-lto-defs.mk
 endif
 
