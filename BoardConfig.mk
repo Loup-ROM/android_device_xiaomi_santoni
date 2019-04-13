@@ -28,7 +28,7 @@ BOARD_MKBOOTIMG_ARGS 		:= --ramdisk_offset 0x01000000 --second_offset 0x00f00000
 TARGET_COMPILE_WITH_MSM_KERNEL	:= true
 TARGET_KERNEL_SOURCE 		:= kernel/xiaomi/santoni
 TARGET_EXFAT_DRIVER		:= sdfat
-TARGET_KERNEL_CONFIG		:= santoni_nontreble_defconfig
+TARGET_KERNEL_CONFIG		:= santoni_defconfig
 
 # Architecture
 TARGET_ARCH 	    	:= arm64
