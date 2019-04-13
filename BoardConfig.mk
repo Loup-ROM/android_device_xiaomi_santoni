@@ -249,6 +249,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # SDCLANG 6.0.2
 ifneq ($(HOST_OS),darwin)
   SDCLANG := true
+  TARGET_USE_SDCLANG := true
   SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-6.0.2/bin
   SDCLANG_LTO_DEFS := vendor/lineage/build/core/sdllvm-lto-defs.mk
 endif
