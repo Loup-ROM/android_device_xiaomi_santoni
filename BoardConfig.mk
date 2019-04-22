@@ -253,6 +253,7 @@ ifneq ($(HOST_OS),darwin)
   SDCLANG_PATH := prebuilts/clang/host/linux-x86/sdclang-602/bin
   SDCLANG_PATH_2 := prebuilts/clang/host/linux-x86/sdclang-602/bin
   SDCLANG_LTO_DEFS := vendor/lineage/build/core/sdllvm-lto-defs.mk
+  SDCLANG_COMMON_FLAGS := "-O3 -fvectorize -Wno-user-defined-warnings -Wno-vectorizer-no-neon -Wno-unknown-warning-option -Wno-deprecated-register -Wno-tautological-type-limit-compare -Wno-sign-compare -Wno-gnu-folding-constant -mllvm -arm-implicit-it=always -Wno-inline-asm -Wno-unused-command-line-argument"
 endif
 
 # Inherit the common proprietary files
