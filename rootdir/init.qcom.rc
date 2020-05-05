@@ -177,7 +177,7 @@ on boot
 
     # Fingerprint
     setprop persist.sys.fp.vendor none
-    start gx_fpd
+    enable gx_fpd
     
     #weidong,add the fp sensor infomation,20161122,start
     on property:persist.sys.fp.vendor=switchf
@@ -1050,7 +1050,7 @@ service fingerprintd /system/bin/fingerprintd
     disabled
 
 service gx_fpd /system/bin/gx_fpd
-     class core
+     class late_start
      user root
      group system system
      writepid /dev/cpuset/system-background/tasks
