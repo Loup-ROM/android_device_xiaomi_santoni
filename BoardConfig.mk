@@ -235,5 +235,8 @@ ifneq ($(HOST_OS),darwin)
   SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
 endif
 
+# EAS
+USE_SCHEDBOOST := true
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/santoni/BoardConfigVendor.mk
