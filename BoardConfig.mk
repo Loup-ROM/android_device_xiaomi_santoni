@@ -231,7 +231,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # SDCLANG 3.8
 ifneq ($(HOST_OS),darwin)
   SDCLANG := true
-  SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+  SDCLANG_PATH := prebuilts/clang/host/linux-x86/sdclang-3.8/bin
   SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
 endif
 
