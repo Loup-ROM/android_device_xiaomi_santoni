@@ -1577,6 +1577,10 @@ case "$target" in
                 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor
                 echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
+		# if EAS is present, switch to sched governor (no effect if not EAS)
+		echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+		echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+		
                 # Disable L2-GDHS low power modes
                 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
                 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled
